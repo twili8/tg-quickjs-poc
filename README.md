@@ -1,6 +1,6 @@
 # tg-quickjs-poc
 
-**THIS CAN BRICK YOUR TELEGRAM APP. Upon testing it on iOS it was impossible to exit the chat due to a crash loop. **\
+**THIS CAN BRICK YOUR TELEGRAM APP. Upon testing it on iOS it was impossible to exit the chat due to a crash loop.**
 
 Telegram Desktop renders bot widgets with a QuickJS-ng sandbox that runs inside
 the client process. A widget message that arrives in a chat is parsed and
